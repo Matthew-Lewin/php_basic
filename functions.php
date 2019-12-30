@@ -7,12 +7,7 @@ function dd ($data) {
 }
 
 function connectToDB($db, $db_user, $db_password) {
-	try {
-		return new PDO($db, $db_user, $db_password);
-	} catch (PDOExceptiopn $e) {
-		die('Could not connect');
-	};
-
+	
 }
 
 function fetchAllTasks($pdo) {

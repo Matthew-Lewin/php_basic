@@ -5,8 +5,9 @@
 require 'Task.php';
 require 'db.php';
 require "functions.php";
+require "database/Connection.php";
 
-$pdo	= connectToDB($db, $db_user, $db_password);
+$pdo	= Connection::make($db, $db_user, $db_password);
 $tasks	= fetchAllTasks($pdo);
 
 require "index.view.php";
