@@ -1,13 +1,9 @@
 <?php
 
-require "bootstrap.php";
 
 // Classes - think nouns: task, user, comment, etc.
+$query	= require "bootstrap.php";
 
-$pdo		= Connection::make($db, $db_user, $db_password);
-
-$query	= new QueryBuilder($pdo);
-
-$tasks	= $query->selectAll('tasks');
+$tasks	= $query->selectAll('tasks'); 
 
 require "index.view.php";
